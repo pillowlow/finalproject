@@ -38,7 +38,46 @@
       
     </div>
   </div>
-  
+  <div class="container news">
+    <div class="grid">
+      
+    </div>
+    <div class="newsblock">
+      <h2>近期工作</h2>
+      <HR size=1 align="ceter" width="90%"></HR>
+      <div class="photo">
+        <a href="https://www.youtube.com/watch?v=lUNoJ-OrMbM&feature=youtu.be">
+        <img src="../assets/webexamole.jpg">
+        </a>
+      </div>
+      <div class="workcontent">
+        <h3>遊戲「魔女的贗品」開發</h3>
+        <HR size=1 align="ceter" width="90%"></HR>
+        <h6>恩...就是自己開發遊戲啦，因為我除了音樂沒辦法以外，劇本美術程式都可以自己來了，好像就意外的很適合做遊戲。所以就一直開始做到現在了恩...目標
+        ...大概就是產出一款可以在玩家兼做出口碑的，屬於台灣的小品遊戲吧。
+          <br><br>
+          可以點那個圖片看看影片連結什麼的...?
+        </h6>
+      </div>
+    </div>
+    <div class=" othernewsblocks">
+      <marquee >期末大爆炸 期末大爆炸 期末大爆炸 期末大爆炸 期末大爆炸 期末大爆炸</marquee>
+    </div>
+    <div class=" othernewsblocks">
+      <marquee >期末大爆炸 期末大爆炸 期末大爆炸 期末大爆炸 期末大爆炸 期末大爆炸</marquee>
+    </div>
+    <div class=" othernewsblocks">
+      <marquee >期末大爆炸 期末大爆炸 期末大爆炸 期末大爆炸 期末大爆炸 期末大爆炸</marquee>
+    </div>
+
+  </div>
+  <div class="container footer">
+    <h6>email: tmps9930613@gmail.com  &emsp;&emsp;&emsp;&emsp; instegram: pillowlowchen &emsp;&emsp;&emsp;&emsp; 
+      github: pillowlow
+    
+    </h6>
+    
+  </div>
 </template>
 
 <script>
@@ -137,8 +176,13 @@ export default {
   overflow: hidden;
   border-style: solid;
   padding:2px;
-  position: absolute;
+  position: relative;
   margin-left: 5vw;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.container:hover{
+  transform: scale(1.01,1.01);
 }
 #p5Canvas {
   width: 90vw;
@@ -177,6 +221,10 @@ body{
   align-content: center;
   
 }
+.wordblocck1:hover{
+  
+  transform: scale(1.02,1.02);
+}
 .Title{
   
   position: absolute;
@@ -207,11 +255,152 @@ body{
   left:12.5vw;
   top:25%;
 }
-
+#logo:hover{
+  transform: scale(1.02,1.02);
+  -webkit-animation: logo 1s linear infinite;
+}
+@-webkit-keyframes logo {
+  0%{
+    transform: rotate3d(0,1,0,0deg);
+  }
+  25%{
+    transform: rotate3d(0,1,0,180deg);
+  }
+  50%{
+    transform: rotate3d(0,1,0,360deg);
+  }
+  75%{
+    transform: rotate3d(0,1,0,-180deg);
+  }
+  100%{
+    transform: rotate3d(0,1,0,0deg);
+  }
+}
 .Titlebar{
   position: absolute;
   top:60%;
   width: 40vw;
   padding: 10px;
+}
+.Titlebar:hover{
+  transform: scale(1.02,1.02);
+}
+.footer{
+  float: top;
+  bottom: 0;
+  height: 10vh;
+  margin-top: 3px;
+  
+  text-align: center;
+}
+.news{
+  float: left;
+  height: 60vh;
+}
+.grid {
+  background: black;
+  opacity: 0.4;
+  background-image:
+      linear-gradient(rgba(255,255,255,.3) 1px, transparent 0),
+      linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 0),
+      linear-gradient(white 1px, transparent 0),
+      linear-gradient(90deg, white 1px, transparent 0);
+  background-size: 1vw 1vw, 1vw 1vw, 5vw 5vw, 5vw 5vw;
+  position: absolute;
+  width: 90vw;
+  height: 60vh;
+  padding: 5px;
+}
+.grid:hover{
+  -webkit-animation: grid 2s ease-in-out 1;
+  background-image:
+      linear-gradient(rgba(255,255,255,.3) 1px, transparent 0),
+      linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 0),
+      linear-gradient(white 1px, transparent 0),
+      linear-gradient(90deg, white 1px, transparent 0);
+  background-size: 2vw 2vw, 2vw 2vw, 10vw 10vw, 10vw 10vw;
+}
+@-webkit-keyframes grid {
+  from{
+    background-image:
+        linear-gradient(rgba(255,255,255,.3) 1px, transparent 0),
+        linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 0),
+        linear-gradient(white 1px, transparent 0),
+        linear-gradient(90deg, white 1px, transparent 0);
+    background-size: 1vw 1vw, 1vw 1vw, 5vw 5vw, 5vw 5vw;
+  }
+  to{
+    background-image:
+        linear-gradient(rgba(255,255,255,.3) 1px, transparent 0),
+        linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 0),
+        linear-gradient(white 1px, transparent 0),
+        linear-gradient(90deg, white 1px, transparent 0);
+    background-size: 2vw 2vw, 2vw 2vw, 10vw 10vw, 10vw 10vw;
+  }
+}
+.newsblock{
+  background-color: rgba(0,0,0,0.7);
+  position: relative;
+  left:5vw;
+  top:5vh;
+  float: left;
+  width: 40vw;
+  height: 50vh;
+  border-color: white;
+  border-width: 2px;
+  overflow: hidden;
+  border-style: solid;
+  z-index: 5;
+}
+.newsblock:hover{
+  transform: scale(1.02,1.02);
+}
+.photo{
+  background-color: rgba(0,0,0,0.8);
+  position: relative;
+  left:2vw;
+  margin-top: 2vh;
+  float: left;
+  width: 30vh;
+  height: 30vh;
+  overflow: hidden;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 30vh;
+  border-style: solid;
+  z-index: 6;
+}
+.photo:hover{
+  transform: scale(1.02,1.02);
+}
+.othernewsblocks{
+  background-color: rgba(0,0,0,0.8);
+  position: relative;
+  width: 40vw;
+  height: 10vh;
+  padding: 2px;
+  float: right;
+  right: 2vw;
+  top: 10vh;
+  z-index: 6;
+  margin-bottom: 5vh;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  line-height: 10vh;
+}
+.othernewsblocks:hover{
+  z-index: 10;
+  transform: scale(1.1,1.5);
+  
+}
+.workcontent{
+  width: 20vw;
+  height: 30vh;
+  position: relative;
+  float: left;
+  margin-left: 3vw;
+  margin-top: 1vh;
+  
 }
 </style>

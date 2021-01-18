@@ -1,11 +1,27 @@
 <template>
   
   <div id="nav">
-    <router-link to="/">Example 1</router-link> |
-    <router-link to="/example2">Example 2</router-link> |
-    <router-link to="/example3">Example 3</router-link> |
-    <router-link to="/example4">Example 4</router-link>
+    <div class="block" style="width: 10vw;">
+      開發中OuO
+    </div>
+    <div class="block" style="width: 14vw">
+      <router-link to="/">首頁 Home</router-link> 
+    </div>
+    <div class="block" style="width: 14vw">
+      <router-link to="/example2">關於我 About me</router-link>
+    </div>
+    <div class="block" style="width: 14vw">
+      <router-link to="/example3">作品集 Protfolio</router-link>
+    </div>
+    <div class="block" style="width: 14vw">
+      <router-link to="/example4">參與計畫</router-link>
+    </div>
+    <div class="block" style="width: 20vw">
+      <marquee >試著在空曠處點擊或拖曳滑鼠吧! try to click or drag your mouse in blank side!</marquee>
+    </div>
+    
   </div>
+  
   <router-view :key="$route.fullPath"/>
 </template>
 
@@ -30,6 +46,7 @@
   position: fixed;
   z-index: 100;
   margin-left: 5vw;
+  
 }
 
 #nav a {
@@ -40,4 +57,23 @@
 #nav a.router-link-exact-active {
   color: dimgray;
 }
+.block{
+  background-color: black;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  padding: 2px;
+  height: 4vh;
+  text-align:center;
+  line-height: 4vh;
+  float: left;
+  margin-left: 2px;
+  
+}
+.block:hover{
+  transform: scale(1.1,1.1);
+  z-index: 10;
+}
+
 </style>
