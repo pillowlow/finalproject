@@ -16,20 +16,20 @@
       <br/>
       <br/>
       <h2>  「簡單」的呼喚</h2 >
-      <HR size=1 align="ceter" width="60%"></HR>
+      
       <h6> 
         曾幾何時 我們頭也不回的奔向複雜的世界<br>
         來不及理解的色彩 輪廓 符號從身邊擦身而過時<br>
         那些撩亂的綻放 能否觸碰 我們心裡那  最簡單的呼喚<br>
       </h6>
-      <HR size=1 align="ceter" width="80%"></HR>
+     
       <h6>
         Once  upon  a  time  we ran into a complex world without looking back<br>
         When  the  colors, outlines and symbols passing through <br>
         Don't you wonder if those choatic blooms is beautiful enough <br>
         to touch the simple and primative nature of our innermost being<br> 
       </h6>
-      <HR size=1 align="ceter" width="60%"></HR>
+      
       <h2>call of "simple"</h2 >
       
       
@@ -44,7 +44,7 @@
     </div>
     <div class="newsblock">
       <h2>近期工作</h2>
-      <HR size=1 align="ceter" width="90%"></HR>
+      
       <div class="photo">
         <a href="https://www.youtube.com/watch?v=lUNoJ-OrMbM&feature=youtu.be">
         <img src="../assets/webexamole.jpg">
@@ -52,7 +52,7 @@
       </div>
       <div class="workcontent">
         <h3>遊戲「魔女的贗品」開發</h3>
-        <HR size=1 align="ceter" width="90%"></HR>
+        
         <h6>恩...就是自己開發遊戲啦，因為我除了音樂沒辦法以外，劇本美術程式都可以自己來了，好像就意外的很適合做遊戲。所以就一直開始做到現在了恩...目標
         ...大概就是產出一款可以在玩家兼做出口碑的，屬於台灣的小品遊戲吧。
           <br><br>
@@ -93,7 +93,7 @@ export default {
     const sketch = p5 => {
       
       // start of p5
-      let phase = 0;
+      
       let zoff = 0;
       let xp = 30,yp = 80;
       let ct =0,ct2 = 0;
@@ -127,7 +127,7 @@ export default {
         p5.translate(xp, yp);
         p5.stroke(255);
         p5.noFill();
-        phase += 0.01;
+        
         p5.beginShape();
         for (let a = 0; a < p5.TWO_PI; a += 0.04) {
           // let xoff = map(cos(a),-1,1,0,mouseX/100);
