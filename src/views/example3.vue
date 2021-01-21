@@ -1,71 +1,60 @@
 <template>
-  <div class="container">
-    <div id="p5Canvas"></div>
-  </div>
+  <el-container>
+    <!-- 顶栏 -->
+    
+    <!-- 嵌套容器 -->
+    <el-container>
+      <!-- 侧边导航菜单 -->
+      <el-aside width="150px"></el-aside>
+      <!-- 内容 -->
+      <el-main>
+        <!-- 第一列栅格布局 -->
+        <el-row>
+          <el-col :span="12" class="col1"></el-col>
+          <el-col :span="12" class="col2"></el-col>
+        </el-row>
+        <!-- 第二列布局 -->
+        <el-row>
+          <el-col :span="24" class="col3"></el-col>
+        </el-row>
+      </el-main>
+    </el-container>
+    <!-- 底栏 -->
+    <el-footer height="30px">&copy;究极死胖兽 2019</el-footer>
+  </el-container>
 </template>
 
 <script>
-import P5 from 'p5';
-
 export default {
-  data() {
-    return {
-      p5Canvas: null,
-    }
-  },
-  created() {
-    const sketch = p5 => {
-        let w = 500;
-        let h = 400;
-
-        // let w = window.innerWidth;
-        // let h = window.innerHeight;
-
-        p5.setup = () => {
-            p5.createCanvas(w, h, p5.WEBGL);
-        };
-
-        p5.draw = () => {
-            p5.background(0);
-
-            let locX = p5.mouseX - w / 2;
-            let locY = p5.mouseY - h / 2;
-
-            p5.ambientLight(50);
-            p5.directionalLight(255, 0, 0, 0.25, 0.25, 0);
-            p5.pointLight(0, 0, 255, locX, locY, 250);
-
-            p5.push();
-            p5.translate(-w / 4, 0, 0);
-            p5.rotateZ(p5.frameCount * 0.02);
-            p5.rotateX(p5.frameCount * 0.02);
-            p5.specularMaterial(250);
-            p5.box(100, 100, 100);
-            p5.pop();
-
-            p5.translate(w / 4, 0, 0);
-            p5.ambientMaterial(250);
-            p5.sphere(120, 64);
-
-        };
-    }
-
-    this.p5Canvas = new P5(sketch, 'p5Canvas');
-  },
-  unmounted () {
-    this.p5Canvas = null;
-  },
 }
 </script>
 
 <style>
-#p5Canvas {
-  width: 100vw;
-  position: relative;
-}
 
-main {
-  margin: 0 auto;
-  width: 90vw;
+.el-footer {
+  background-color: #909399;
+  color: black;
+  text-align: center;
+}
+.el-aside {
+  background-color: chartreuse;
+}
+.el-main {
+  background-color: darkkhaki;
+}
+.el-col {
+  height: 200px;
+}
+.containerblock{
+  
+}
+.col1 {
+  background-color: teal;
+}
+.col2 {
+  background-color: tomato;
+}
+.col3 {
+  background-color: thistle;
 }
 </style>
