@@ -1,31 +1,37 @@
 <template>
 
   <div id="nav">
-    <div class="block" style="width: 10vw;">
-      開發中OuO
-    </div>
-    <div class="block" style="width: 14vw">
-      <router-link to="/">首頁 Home</router-link>
-    </div>
-    <div class="block" style="width: 14vw">
-      <router-link to="/example2">關於我 About me</router-link>
-    </div>
-    <div class="block" style="width: 14vw">
-      <router-link to="/example3">作品集 Protfolio</router-link>
-    </div>
-    <div class="block" style="width: 14vw">
-      <router-link to="/example4">參與計畫</router-link>
-    </div>
-    <div class="block" style="width: 20vw">
-      <marquee >試著在空曠處點擊或拖曳滑鼠吧! try to click or drag your mouse in blank side!</marquee>
-    </div>
-
+    <el-row class="navrow" >
+      <el-col :span="4" class="block">
+        <router-link to="/">首頁 Home</router-link>
+      </el-col>
+      <el-col :span="5" class="block">
+        <router-link to="/example2">關於我 About Me</router-link>
+      </el-col>
+      <el-col :span="5" class="block">
+        <router-link to="/example3">作品集 Profolio</router-link>
+      </el-col>
+      <el-col :span="5" class="block">
+        <router-link to="/example4">文字創作 Literature</router-link>
+      </el-col>
+      <el-col :span="5" class="block">
+        <router-link to="/example5">參與計畫 Project</router-link>
+      </el-col>
+    </el-row>
+    
+    
   </div>
 
   <router-view :key="$route.fullPath"/>
 </template>
 
 <style>
+.el-row{
+  padding: 0;
+}
+.el-col {
+  padding: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -33,20 +39,24 @@
   text-align: center;
   color: white;
 }
-
+.navrow{
+  width: 95vw;
+  height: 4vh;
+  position: absolute;
+  font-size: 0.1rem;
+}
 #nav {
 
   background-color: black;
   height: 5vh;
-  width: 90vw;
+  width: 95vw;
   border-style: solid;
   border-color: white;
   border-width:2px;
   padding: 2px;
   position: fixed;
   z-index: 100;
-  margin-left: 5vw;
-
+  
 }
 
 #nav a {
@@ -59,7 +69,6 @@
 }
 .block{
   background-color: black;
-  position: relative;
   border-width: 1px;
   border-style: solid;
   border-color: white;
