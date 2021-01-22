@@ -5,17 +5,32 @@
     <!-- 嵌套容器 -->
     <el-container>
       <!-- 侧边导航菜单 -->
-      <el-aside width="150px"></el-aside>
+      <el-aside width="150px">
+        <el-row>
+          <el-col :span="8" class="col2" height ="5px"></el-col>
+          <el-col :span="16" class="col3"></el-col>
+        </el-row>
+      </el-aside>
       <!-- 内容 -->
       <el-main>
         <!-- 第一列栅格布局 -->
+        <el-row>
+          <el-row>
+            <el-col :span="12" class="col1"></el-col>
+            <el-col :span="12" class="col2"></el-col>
+          </el-row>
+          <el-row>
+            <el-col :span="12" class="col1"></el-col>
+            <el-col :span="12" class="col2"></el-col>
+          </el-row>
+        </el-row>
         <el-row>
           <el-col :span="12" class="col1"></el-col>
           <el-col :span="12" class="col2"></el-col>
         </el-row>
         <!-- 第二列布局 -->
         <el-row>
-          <el-col :span="24" class="col3"></el-col>
+          <el-col :span="24" class="col3" height ="5px"></el-col>
         </el-row>
       </el-main>
     </el-container>
@@ -40,7 +55,7 @@ export default {
   background-color: chartreuse;
 }
 .el-main {
-  background-color: darkkhaki;
+  background-color: black;
 }
 .el-col {
   height: 200px;
