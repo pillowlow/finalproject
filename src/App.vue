@@ -12,7 +12,7 @@
         <router-link to="/example3">作品集 Profolio</router-link>
       </el-col>
       <el-col :span="5" class="block">
-        <router-link to="/example4">文字創作 Literature</router-link>
+        <router-link to="/example4">文字工作 Writing</router-link>
       </el-col>
       <el-col :span="5" class="block">
         <router-link to="/example5">參與計畫 Project</router-link>

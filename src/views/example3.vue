@@ -1,95 +1,90 @@
 <template>
-<head>
-  
-</head>
-<body>
-    <el-container class="containerblock">
-      <el-header height="70vh"  class="containerblock">
+  <head>
 
-      
-          <el-row class="containerblock headercol">
-            <div id="p5Canvas"></div>
-            <el-col :span="12" >
-              <div id="logo"></div>
-              <div id="webtitle">
-                <h2>工程 X 藝術 X 文學</h2>
-                <h6>Engineering X Art X Literature</h6>
-                <h6>陳柏諭(培洛洛)個人網頁</h6>
-              </div>
-              
-            </el-col>
-            <el-col :span="12" >
-              <div id="wordblock1">
-                <br>
-                <h5>  「簡單」的呼喚</h5 >
+  </head>
+  <body>
+  <el-container >
+    <el-header height="100vh"  >
+      <div id="p5Canvas-02"></div>
+      <el-row class=" headercol " ></el-row>
+      <el-row  >
+
+        <el-col :span="4" >
+        </el-col>
+        <el-col :span="16"   style="margin-top: 1rem">
+          <el-container id="wordblock1-02">
+            
+            <el-container >
+              <el-aside class="containerblock " width="3rem" height="3rem">
+                <h5>sticker</h5>
+                <div id="logo-03"></div>
+              </el-aside>
+              <el-main class="containerblock " style="padding: 0 0.3rem  0 0.3rem ">
+                <h5>  作品集</h5 >
                 <h6>
-                  曾幾何時 我們頭也不回的奔向複雜的世界<br>
-                  來不及理解的色彩 輪廓 符號從身邊擦身而過時<br>
-                  那些撩亂的綻放 能否觸碰 我們心裡那  最簡單的呼喚<br>
+                  &emsp; 主要是一些插畫，影像合成和商用設計的手稿。
+                  <br><br>
+                  &emsp;&emsp;做不完阿@@老師
+
                 </h6>
-                <h6>
-                  Once  upon  a  time, we ran into a complex world without looking<br>
-                  back .When  the  colors, outlines and symbols passing  <br>
-                  through. Don't you wonder if those choatic blooms is<br>
-                  beautiful enough to touch the simple and primative<br>
-                  nature of our innermost being<br>
-                </h6>
-                <h5>call of "simple"</h5 >
-              </div>
-            </el-col>
-          </el-row>
+
+              </el-main>
+            </el-container>
+            <el-footer class="containerblock " height="1.5rem" style="border-radius: 0 0 0.4rem 0.4rem ;padding: 0 0.3rem  0 0.3rem">
+              <h6>
+                I'v ... tried my best
+              </h6>
+              <h5>profolio</h5 >
+
+            </el-footer>
+          </el-container>
+          
+        </el-col>
+        <el-col :span="4" >
+        </el-col>
+      </el-row>
       
-      </el-header>
-      <el-main class="containerblock">
-        <el-row>
-          <el-col>
-            <div class="marqee containerblock">
-              <ul1>
-                <li>可以試著在空白處 ，點擊 ，長按 或 拖曳 滑鼠試試看!</li>
-                <li>Plz try to click, press or drag, on blank space</li>
-              </ul1>
-            </div>
-          </el-col>
-        </el-row>
-        <el-row class="containerblock" id="wordblock02">
-          <div class="flapCircle containerblock " id="flp01">
-            <br>
-            <h3>關於我</h3>
-            <h6></h6>
-          </div>
-          <div class="flapCircle containerblock " id="flp02">
-            12354545
-          </div>
-          <div class="flapCircle containerblock " id="flp03">
-            12354545
-          </div>
-          <div class="flapCircle containerblock " id="flp04">
-            12354545
-          </div>
-          <div class="flapCirclecon containerblock ">
-            
-          </div>
-          <el-col :span="6" class="containerblock flap bg401" >
-            
-              
-            
-          </el-col>
-          <el-col :span="6" class="containerblock flap bg402">
-            
-          </el-col>
-          <el-col :span="6" class="containerblock flap bg403">
-            
-          </el-col>
-          <el-col :span="6" class="containerblock flap bg404">
-            
-          </el-col>
-        </el-row>
-      </el-main>
-      <el-footer class="containerblock">Footer</el-footer>
-    </el-container>
-    
-</body>
-  
+
+    </el-header>
+    <el-main class=" newspaper" >
+      <div class="containerblock switchblock">
+      <el-carousel :interval="5000" :height="dataHeight" >
+        <el-carousel-item class="newspapaer containerblock" v-for="item in 4" :key="item">
+          <h3>{{ item }}</h3>
+        </el-carousel-item>
+      </el-carousel>
+      </div>
+      
+    </el-main>
+    <el-footer class="containerblock ">
+      <el-row class="containerblock footerow" >
+        <el-col :span="8">
+          <a target="_blank" href="https://www.instagram.com/pillowlowchen/?hl=en"
+             style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute">
+            <span >Instagram</span>
+          </a>
+        </el-col>
+        <el-col :span="8">
+          <a target="_blank" href="https://github.com/pillowlow"
+             style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute">
+            <span >Github</span>
+          </a>
+        </el-col>
+        <el-col :span="8">
+
+          <a target="_blank" href="mailto:tmps9930613@gmail.com"
+             style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute"
+          >
+            Email
+          </a>
+        </el-col>
+
+      </el-row>
+    </el-footer>
+  </el-container>
+
+  </body>
+
 </template>
 
 <script>
@@ -97,10 +92,16 @@ import P5 from 'p5';
 var html = document.documentElement;
 
 export default {
-  
-  
-  
-  
+
+  name: 'carousel',
+  props: {
+    dataHeight: {
+      type: String,
+      default: '3rem'
+    }
+  },
+
+
   data() {
     screenWidth: document.body.clientWidth
     function fontS(){
@@ -112,15 +113,7 @@ export default {
       p5Canvas: null,
     }
   },
-  mounted () {
-    const that = this
-    window.onresize = () => {
-      return (() => {
-        window.screenWidth = document.body.clientWidth
-        that.screenWidth = window.screenWidth
-      })()
-    }
-  },
+
   watch: {
     screenWidth (val) {
       if (!this.timer) {
@@ -134,15 +127,23 @@ export default {
           that.timer = false
         }, 400)
 
-        
+
       }
       fontS();
     }
-    
-    
+
+
   },
+  /*
   created() {
-    const sketch = p5 => {
+    const that = this
+    window.onresize = () => {
+      return (() => {
+        window.screenWidth = document.body.clientWidth
+        that.screenWidth = window.screenWidth
+      })()
+    };
+    const sketch02 = p5 => {
 
       // start of p5
 
@@ -170,7 +171,7 @@ export default {
         xp = p5.windowWidth/1.5 +r3*(p5.cos(ct2));
         yp = p5.windowHeight/(100/35) +r3*(p5. sin(ct2));
 
-        p5.print(p5.mouseX,p5.mouseY);
+        //p5.print(p5.mouseX,p5.mouseY);
         if(p5.mouseIsPressed ){
           xp -= (xp-p5.mouseX);
           yp -= (yp-p5.mouseY);
@@ -211,54 +212,66 @@ export default {
       //end of p5
     }
 
-    this.p5Canvas = new P5(sketch, 'p5Canvas');
+    this.p5Canvas02 = new P5(sketch02, 'p5Canvas-02');
   },
   unmounted () {
-    this.p5Canvas = null;
+    console.log(this.p5Canvas02)
+    this.p5Canvas02 = null;
+    console.log(this.p5Canvas02)
   },
-  
-  
+   */
+
 }
 </script>
 
 
 <style>
-.el-main{
+el-main{
   padding: 1px;
+  
 }
-.el-header{
+el-header{
   padding: 1px;
   margin-top: 5vh;
-}
-.el-row{
-  padding: 0;
-}
-.el-col {
-  padding: 0;
-}
-.bg401{
-  background-image: url('../assets/4bg-01.svg');
-  background-repeat: no-repeat;
-}
-.bg402{
-  background-image: url('../assets/4bg-02.svg');
-  background-repeat: no-repeat;
-}
-.bg403{
-  background-image: url('../assets/4bg-03.svg');
-  background-repeat: no-repeat;
-}
-.bg404{
-  background-image: url('../assets/4bg-04.svg');
-  background-repeat: no-repeat;
-}
-#p5Canvas {
   
+  
+  
+}
+el-row{
+  padding: 0;
+}
+el-col {
+  padding: 0;
+}
+.el-footer{
+  padding: 1px;
+  height: 2rem;
+
+}
+switch{
+  height: 30vh;
   position: absolute;
-  
-  left:0%;
-  top: 0%;
+  margin-top: 100px;
 }
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 18px;
+  opacity: 0.75;
+  margin: 0;
+  height: 3rem;
+  
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: rgba(0,0,0,0.8) ;
+  height: 3rem;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+  background-color: rgba(0,0,0,0.6) ;
+  height: 3rem;
+}
+
 #webtitle{
   position: relative;
   width: 40vw;
@@ -268,55 +281,48 @@ export default {
   line-height: 1vh;
   letter-spacing: 0.5vw;
 }
-#logo{
-  background-image: url("../assets/logo.svg");
-  opacity: 0.8;
-  mix-blend-mode: lighten;
+#logo-03{
+  background-image: url("../assets/OIP (6).jpg");
+  float: left;
   position: relative;
-  width: 10vw;
-  height: 10vw;
-  border-radius: 15vw;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 1.7rem;
   border-color: white;
   border-style: solid;
+  border-width: 3px;
+  margin-left: 0.5rem;
+  top:60%;
+  margin-top: -1.5rem;
+  line-height: 0.3rem;
+  
+  z-index: 20;
+
+}
+.newspaper{
+  background-color: rgba(0,0,0,0.6) ;
+  background-blend-mode: multiply;
+  background-image: url("../assets/newspaper-2.svg");
+  height:5rem;
+  width: 90vw;
+  margin-left: 3vw;
   border-width: 1px;
-  left:20vw;
-  margin-top:15vh;
+  border-color: white;
+  border-style: solid;
+  overflow: hidden;
   
 }
-#logo:hover{
-  transform: scale(1.02,1.02);
-  -webkit-animation: logo 1s linear infinite;
-}
-@-webkit-keyframes logo {
-  0%{
-    transform: rotate3d(0,1,0,0deg);
-  }
-  25%{
-    transform: rotate3d(0,1,0,180deg);
-  }
-  50%{
-    transform: rotate3d(0,1,0,360deg);
-  }
-  75%{
-    transform: rotate3d(0,1,0,-180deg);
-  }
-  100%{
-    transform: rotate3d(0,1,0,0deg);
-  }
-}
-#wordblock1{
-  position: absolute;
-  margin-left: 5vw;
+#wordblock1-02{
+  
   font-weight: bold;
   line-height: 3vh;
   color: white;
   border-color: rgba(255,255,255,0.4);
   border-width: 1px;
   border-style: solid;
+  border-radius: 0 0 0 0;
   align-content: center;
   background-color: rgba(0,0,0,0.7);
-  height: 70vh;
-  width: 40vw;
   background-image:
       linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
       linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 0),
@@ -327,7 +333,7 @@ export default {
 }
 #wordblock1:hover{
   -webkit-animation: grid 2s ease-in-out 1;
-  transform: scale(1.02,1.02);
+  
   background-image:
       linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
       linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 0),
@@ -359,22 +365,31 @@ export default {
   border-color: white;
   border-style: solid;
   overflow: hidden;
+  
 }
 .headercol{
-  height: 69vh;
+  height: 2vh;
+}
+.headerco2{
+  height: 5rem;
 }
 ul1{
   font-size: 0.15rem;
 }
+.switchblock{
+   position: relative;
+  margin: 1rem 1rem 1rem 1rem;
+  height: 3rem;
+}
 .marqee {
-  
+
   height: 5vh;
   margin: 0 auto;
   line-height: 5vh;
   overflow: hidden;
   position: relative;
   background: rgba(0,0,0,0.3);
-  
+
 }
 .marqee > ul1 {
   padding-left: 0;
@@ -400,58 +415,10 @@ ul1{
     transform: translateX(-100%);
   }
 }
-#wordblock02{
-  height: 25vw;
-}
-.flap{
-  z-index: 2;
-  opacity: 0.4;
-}
-.flap:hover{
-  z-index: 3;
-  
-  -webkit-animation: logo 1s linear 1;
-  
-  
-}
-.flapCircle{
-  z-index: 6;
-  position: absolute;
-  
-  margin-top: 2.5vw ;
-  width: 1.7rem;
-  height: 1.7rem;
-  border-radius: 1.7rem;
-  background-color: rgba(0,0,0,0.7);
-}
-#flp01{
-  margin-left: 0.4rem;
-}
-#flp02{
-  margin-left: 2.8rem;
-}
-#flp03{
-  margin-left: 5.2rem;
-}
-#flp04{
-  margin-left: 7.6rem;
-}
-.flapCircle:hover{
-  transform: scale(1.02,1.02);
-  
-}
-.flapCirclecon{
-  width:100vw;
-  height: 25vw;
-  margin-left: 0;
-  position: absolute;
-  background-image:
-      linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
-      linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 0),
-      linear-gradient(rgba(255,255,255,0.4) 1px, transparent 0),
-      linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 0);
-  background-size: 1.5vw 1.5vw, 1.5vw 1.5vw, 7.5vw 7.5vw, 7.5vw 7.5vw;
-  z-index: 1;
+
+
+.footerow{
+  height: 2rem;
 }
 body{
   background-color: black;

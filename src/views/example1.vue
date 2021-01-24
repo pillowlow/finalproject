@@ -6,7 +6,7 @@
   <el-container class="containerblock">
     <el-header height="70vh"  class="containerblock">
 
-
+      
       <el-row class="containerblock headercol">
         <div id="p5Canvas"></div>
         <el-col :span="12" >
@@ -45,7 +45,7 @@
         <el-col>
           <div class="marqee containerblock">
             <ul1>
-              <li>可以試著在空白處 ，點擊 ，長按 或 拖曳 滑鼠試試看! 網頁有盡量做成rwd歐!</li>
+              <li>可以試著在空白處 ，點擊 ，長按 或 拖曳 滑鼠試試看! 網頁有盡量做成rwd歐! 跑版請重新整理...</li>
               <li>Plz try to click, press or drag, on blank space The webside sticks to the RWD rules</li>
             </ul1>
           </div>
@@ -147,15 +147,7 @@ export default {
       p5Canvas: null,
     }
   },
-  mounted () {
-    const that = this
-    window.onresize = () => {
-      return (() => {
-        window.screenWidth = document.body.clientWidth
-        that.screenWidth = window.screenWidth
-      })()
-    }
-  },
+  
   watch: {
     screenWidth (val) {
       if (!this.timer) {
@@ -177,6 +169,13 @@ export default {
 
   },
   created() {
+    const that = this
+    window.onresize = () => {
+      return (() => {
+        window.screenWidth = document.body.clientWidth
+        that.screenWidth = window.screenWidth
+      })()
+    };
     const sketch = p5 => {
 
       // start of p5
@@ -205,7 +204,7 @@ export default {
         xp = p5.windowWidth/1.5 +r3*(p5.cos(ct2));
         yp = p5.windowHeight/(100/35) +r3*(p5. sin(ct2));
 
-        p5.print(p5.mouseX,p5.mouseY);
+        //p5.print(p5.mouseX,p5.mouseY);
         if(p5.mouseIsPressed ){
           xp -= (xp-p5.mouseX);
           yp -= (yp-p5.mouseY);
@@ -249,7 +248,9 @@ export default {
     this.p5Canvas = new P5(sketch, 'p5Canvas');
   },
   unmounted () {
+    console.log(this.p5Canvas)
     this.p5Canvas = null;
+    console.log(this.p5Canvas)
   },
 
 
