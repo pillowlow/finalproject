@@ -1,130 +1,118 @@
 <template>
-  <head>
+  <head></head>
 
-  </head>
   <body>
-  <el-container class="containerblock">
-    <el-header height="70vh"  class="containerblock">
-
-      
-      <el-row class="containerblock headercol">
-        <div id="p5Canvas"></div>
-        <el-col :span="12" >
-          <div id="logo"></div>
-          <div id="webtitle">
-            <h2>工程 X 藝術 X 文學</h2>
-            <h6>Engineering X Art X Literature</h6>
-            <h6>陳柏諭(培洛洛)個人網頁</h6>
-          </div>
-
-        </el-col>
-        <el-col :span="12" >
-          <div id="wordblock1">
-            <br>
-            <h5>  「簡單」的呼喚</h5 >
-            <h6>
-              曾幾何時 我們頭也不回的奔向複雜的世界<br>
-              來不及理解的色彩 輪廓 符號從身邊擦身而過時<br>
-              那些撩亂的綻放 能否觸碰 我們心裡那  最簡單的呼喚<br>
-            </h6>
-            <h6>
-              Once  upon  a  time, we ran into a complex world without looking<br>
-              back .When  the  colors, outlines and symbols passing  <br>
-              through. Don't you wonder if those choatic blooms is<br>
-              beautiful enough to touch the simple and primative<br>
-              nature of our innermost being<br>
-            </h6>
-            <h5>call of "simple"</h5 >
-          </div>
-        </el-col>
-      </el-row>
-
-    </el-header>
-    <el-main class="containerblock">
-      <el-row>
-        <el-col>
-          <div class="marqee containerblock">
-            <ul1>
-              <li>可以試著在空白處 ，點擊 ，長按 或 拖曳 滑鼠試試看! 網頁有盡量做成rwd歐! 跑版請重新整理...</li>
-              <li>Plz try to click, press or drag, on blank space The webside sticks to the RWD rules</li>
-            </ul1>
-          </div>
-        </el-col>
-      </el-row>
-      <el-row class="containerblock" id="wordblock02">
-        <div class="flapCircle containerblock " id="flp01">
-          <br>
-          <router-link to="/example2" style="color:white;font-size: 0.3rem;font-weight:bolder">關於我 </router-link>
-          <br>
-          <router-link to="/example2" style="color:white;font-size: 0.2rem"> About me</router-link>
-        </div>
-        <div class="flapCircle containerblock " id="flp02">
-          <br>
-          <router-link to="/example3" style="color:white;font-size: 0.3rem;font-weight:bolder">作品集 </router-link>
-          <br>
-          <router-link to="/example3" style="color:white;font-size: 0.2rem"> Profolio </router-link>
-        </div>
-        <div class="flapCircle containerblock " id="flp03">
-          <br>
-          <router-link to="/example4" style="color:white;font-size: 0.3rem;font-weight:bolder">文字創作 </router-link>
-          <br>
-          <router-link to="/example4" style="color:white;font-size: 0.2rem"> Literature </router-link>
-        </div>
-            
-        <div class="flapCircle containerblock " id="flp04">
-          <br>
-          <router-link to="/example5" style="color:white;font-size: 0.3rem;font-weight:bolder">參與計畫 </router-link>
-          <br>
-          <router-link to="/example5" style="color:white;font-size: 0.2rem"> Projets </router-link>
-        </div>
-        <div class="flapCirclecon containerblock ">
-
-        </div>
-        <el-col :span="6" class="containerblock flap bg401" >
-
-
-
-        </el-col>
-        <el-col :span="6" class="containerblock flap bg402">
-
-        </el-col>
-        <el-col :span="6" class="containerblock flap bg403">
-
-        </el-col>
-        <el-col :span="6" class="containerblock flap bg404">
-
-        </el-col>
-      </el-row>
-    </el-main>
-    <el-footer class="containerblock">
-      <el-row class="containerblock footerow" >
-        <el-col :span="8">
-          <a target="_blank" href="https://www.instagram.com/pillowlowchen/?hl=en" 
-             style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute">
-            <span >Instagram</span>
-          </a>
-        </el-col>
-        <el-col :span="8">
-          <a target="_blank" href="https://github.com/pillowlow"
-             style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute">
-            <span >Github</span>
-          </a>
-        </el-col>
-        <el-col :span="8">
+    <el-container class="containerblock">
+      <el-header height="70vh"  class="containerblock">
+        <el-row class="containerblock headercol">
+          <div id="p5Canvas"></div>
           
-          <a target="_blank" href="mailto:tmps9930613@gmail.com" 
-             style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute"
-             >
-            Email
-          </a>
-        </el-col>
-        
-      </el-row>
-    </el-footer>
-  </el-container>
+          <el-col :span="12" >
+            <div id="logo"></div>
+            <div id="webtitle">
+              <h2>工程 X 藝術 X 文學</h2>
+              <h6>Engineering X Art X Literature</h6>
+              <h6>陳柏諭(培洛洛)個人網頁</h6>
+            </div>
+          </el-col>
 
+          <el-col :span="12" >
+            <div id="wordblock1">
+              <br>
+              <h5>  「簡單」的呼喚</h5 >
+              <h6>
+                曾幾何時 我們頭也不回的奔向複雜的世界<br>
+                來不及理解的色彩 輪廓 符號從身邊擦身而過時<br>
+                那些撩亂的綻放 能否觸碰 我們心裡那  最簡單的呼喚<br>
+              </h6>
+              <h6>
+                Once  upon  a  time, we ran into a complex world without looking<br>
+                back .When  the  colors, outlines and symbols passing  <br>
+                through. Don't you wonder if those choatic blooms is<br>
+                beautiful enough to touch the simple and primative<br>
+                nature of our innermost being<br>
+              </h6>
+              <h5>call of "simple"</h5 >
+            </div>
+          </el-col>
+        </el-row>
+      </el-header>
+
+      <el-main class="containerblock">
+        <el-row>
+          <el-col>
+            <div class="marqee containerblock">
+              <ul1>
+                <li>可以試著在空白處 ，點擊 ，長按 或 拖曳 滑鼠試試看! 網頁有盡量做成rwd歐! 跑版請重新整理...</li>
+                <li>Plz try to click, press or drag, on blank space The webside sticks to the RWD rules</li>
+              </ul1>
+            </div>
+          </el-col>
+        </el-row>
+
+        <el-row class="containerblock" id="wordblock02">
+          <div class="flapCircle containerblock " id="flp01">
+            <br>
+            <router-link to="/example2" style="color:white;font-size: 0.3rem;font-weight:bolder">關於我 </router-link>
+            <br>
+            <router-link to="/example2" style="color:white;font-size: 0.2rem"> About me</router-link>
+          </div>
+          
+          <div class="flapCircle containerblock " id="flp02">
+            <br>
+            <router-link to="/example3" style="color:white;font-size: 0.3rem;font-weight:bolder">作品集 </router-link>
+            <br>
+            <router-link to="/example3" style="color:white;font-size: 0.2rem"> Profolio </router-link>
+          </div>
+          
+          <div class="flapCircle containerblock " id="flp03">
+            <br>
+            <router-link to="/example4" style="color:white;font-size: 0.3rem;font-weight:bolder">文字創作 </router-link>
+            <br>
+            <router-link to="/example4" style="color:white;font-size: 0.2rem"> Literature </router-link>
+          </div>
+
+          <div class="flapCircle containerblock " id="flp04">
+            <br>
+            <router-link to="/example5" style="color:white;font-size: 0.3rem;font-weight:bolder">參與計畫 </router-link>
+            <br>
+            <router-link to="/example5" style="color:white;font-size: 0.2rem"> Projets </router-link>
+          </div>
+          
+          <div class="flapCirclecon containerblock "></div>
+          <el-col :span="6" class="containerblock flap bg401"></el-col>
+          <el-col :span="6" class="containerblock flap bg402"></el-col>
+          <el-col :span="6" class="containerblock flap bg403"></el-col>
+          <el-col :span="6" class="containerblock flap bg404"></el-col>
+        </el-row>
+      </el-main>
+
+      <el-footer class="containerblock">
+        <el-row class="containerblock footerow" >
+          <el-col :span="8">
+            <a target="_blank" href="https://www.instagram.com/pillowlowchen/?hl=en" 
+              style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute">
+              <span>Instagram</span>
+            </a>
+          </el-col>
+
+          <el-col :span="8">
+            <a target="_blank" href="https://github.com/pillowlow"
+              style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute">
+              <span>Github</span>
+            </a>
+          </el-col>
+
+          <el-col :span="8">
+            <a target="_blank" href="mailto:tmps9930613@gmail.com" 
+              style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute">
+              Email
+            </a>
+          </el-col>
+        </el-row>
+      </el-footer>
+    </el-container>
   </body>
-
 </template>
 
 <script>
@@ -246,6 +234,7 @@ export default {
     }
 
     this.p5Canvas = new P5(sketch, 'p5Canvas');
+    console.log(this.p5Canvas);
   },
   unmounted () {
     console.log(this.p5Canvas)
@@ -266,12 +255,12 @@ export default {
   padding: 1px;
   margin-top: 5vh;
 }
-.el-row{
+/*.el-row{
   padding: 0;
 }
 .el-col {
   padding: 0;
-}
+}*/
 .el-footer{
   padding: 1px;
   height: 2rem;
@@ -294,11 +283,9 @@ export default {
   background-repeat: no-repeat;
 }
 #p5Canvas {
-
   position: absolute;
-
-  left:0%;
-  top: 0%;
+  left: 0;
+  top: 0;
 }
 #webtitle{
   position: relative;
@@ -326,9 +313,9 @@ export default {
 }
 #logo:hover{
   transform: scale(1.02,1.02);
-  -webkit-animation: logo 1s linear infinite;
+  animation: logo 1s linear infinite;
 }
-@-webkit-keyframes logo {
+@keyframes logo {
   0%{
     transform: rotate3d(0,1,0,0deg);
   }
@@ -367,7 +354,7 @@ export default {
 
 }
 #wordblock1:hover{
-  -webkit-animation: grid 2s ease-in-out 1;
+  animation: grid 2s ease-in-out 1;
   transform: scale(1.02,1.02);
   background-image:
       linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
@@ -376,7 +363,7 @@ export default {
       linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 0);
   background-size: 2vw 2vw, 2vw 2vw, 10vw 10vw, 10vw 10vw;
 }
-@-webkit-keyframes grid {
+@keyframes grid {
   from{
     background-image:
         linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
@@ -451,7 +438,7 @@ ul1{
 .flap:hover{
   z-index: 3;
 
-  -webkit-animation: logo 1s linear 1;
+  animation: logo 1s linear 1;
 
 
 }

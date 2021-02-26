@@ -5,7 +5,7 @@
   <body>
   <el-container >
     <el-header height="100vh"  >
-      <div id="p5Canvas-02"></div>
+      <div id="p5Canvas_02"></div>
       <el-row class=" headercol " ></el-row>
       <el-row  >
 
@@ -116,7 +116,7 @@ export default {
       html.style.fontSize = hS + "px";
     }
     return {
-      p5Canvas: null,
+      p5Canvas_02: null,
     }
   },
 
@@ -218,7 +218,7 @@ export default {
       //end of p5
     }
 
-    this.p5Canvas02 = new P5(sketch02, 'p5Canvas-02');
+    this.p5Canvas02 = new P5(sketch02, 'p5Canvas_02');
   },
   unmounted () {
     console.log(this.p5Canvas02)
@@ -338,7 +338,7 @@ switch{
 
 }
 #wordblock1:hover{
-  -webkit-animation: grid 2s ease-in-out 1;
+  animation: grid 2s ease-in-out 1;
   
   background-image:
       linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
@@ -347,7 +347,7 @@ switch{
       linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 0);
   background-size: 2vw 2vw, 2vw 2vw, 10vw 10vw, 10vw 10vw;
 }
-@-webkit-keyframes grid {
+@keyframes grid {
   from{
     background-image:
         linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
