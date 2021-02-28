@@ -5,7 +5,7 @@
     <el-container class="containerblock">
       <el-header height="70vh" class="containerblock">
         <el-row>
-          <canvas id="p5Canvas"></canvas>
+          <div id="p5Canvas"></div>
 
           <el-col :span="12">
             <div id="logo"></div>
@@ -240,8 +240,9 @@ export default {
       let r2 =0;
 
       p5.setup = () => {
-        let cnv = p5.createCanvas(p5.windowWidth, 0.7*p5.windowHeight);
-        cnv.parent('#p5Canvas');
+        //let cnv = p5.createCanvas(p5.windowWidth, 0.7*p5.windowHeight);
+        //cnv.parent('#p5Canvas');
+        p5.createCanvas(p5.windowWidth, 0.7*p5.windowHeight);
         p5.background(0,0,0,1);
         //let r = floor(random(10000));
         //let r = 6273;//floor(random(10000));
@@ -291,7 +292,7 @@ export default {
       };
       //end of p5
     }
-    //this.p5Canvas = new P5(sketch, 'p5Canvas');
+    this.p5Canvas = new P5(sketch, 'p5Canvas');
     
     console.log(this.p5Canvas);
   },
