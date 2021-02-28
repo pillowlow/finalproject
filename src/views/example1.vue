@@ -3,11 +3,11 @@
 
   <body>
     <el-container class="containerblock">
-      <el-header height="70vh"  class="containerblock">
-        <el-row class="containerblock headercol">
-          <div id="p5Canvas"></div>
-          
-          <el-col :span="12" >
+      <el-header height="70vh" class="containerblock">
+        <el-row>
+          <canvas id="p5Canvas"></canvas>
+
+          <el-col :span="12">
             <div id="logo"></div>
             <div id="webtitle">
               <h2>工程 X 藝術 X 文學</h2>
@@ -16,23 +16,23 @@
             </div>
           </el-col>
 
-          <el-col :span="12" >
+          <el-col :span="12">
             <div id="wordblock1">
-              <br>
-              <h5>  「簡單」的呼喚</h5 >
+              <br />
+              <h5>「簡單」的呼喚</h5>
               <h6>
-                曾幾何時 我們頭也不回的奔向複雜的世界<br>
-                來不及理解的色彩 輪廓 符號從身邊擦身而過時<br>
-                那些撩亂的綻放 能否觸碰 我們心裡那  最簡單的呼喚<br>
+                曾幾何時 我們頭也不回的奔向複雜的世界<br />
+                來不及理解的色彩 輪廓 符號從身邊擦身而過時<br />
+                那些撩亂的綻放 能否觸碰 我們心裡那 最簡單的呼喚<br />
               </h6>
               <h6>
-                Once  upon  a  time, we ran into a complex world without looking<br>
-                back .When  the  colors, outlines and symbols passing  <br>
-                through. Don't you wonder if those choatic blooms is<br>
-                beautiful enough to touch the simple and primative<br>
-                nature of our innermost being<br>
+                Once upon a time, we ran into a complex world without looking<br />
+                back .When the colors, outlines and symbols passing <br />
+                through. Don't you wonder if those choatic blooms is<br />
+                beautiful enough to touch the simple and primative<br />
+                nature of our innermost being<br />
               </h6>
-              <h5>call of "simple"</h5 >
+              <h5>call of "simple"</h5>
             </div>
           </el-col>
         </el-row>
@@ -43,43 +43,89 @@
           <el-col>
             <div class="marqee containerblock">
               <ul1>
-                <li>可以試著在空白處 ，點擊 ，長按 或 拖曳 滑鼠試試看! 網頁有盡量做成rwd歐! 跑版請重新整理...</li>
-                <li>Plz try to click, press or drag, on blank space The webside sticks to the RWD rules</li>
+                <li>
+                  可以試著在空白處 ，點擊 ，長按 或 拖曳 滑鼠試試看!
+                  網頁有盡量做成rwd歐! 跑版請重新整理...
+                </li>
+                <li>
+                  Plz try to click, press or drag, on blank space The webside
+                  sticks to the RWD rules
+                </li>
               </ul1>
             </div>
           </el-col>
         </el-row>
 
         <el-row class="containerblock" id="wordblock02">
-          <div class="flapCircle containerblock " id="flp01">
-            <br>
-            <router-link to="/example2" style="color:white;font-size: 0.3rem;font-weight:bolder">關於我 </router-link>
-            <br>
-            <router-link to="/example2" style="color:white;font-size: 0.2rem"> About me</router-link>
-          </div>
-          
-          <div class="flapCircle containerblock " id="flp02">
-            <br>
-            <router-link to="/example3" style="color:white;font-size: 0.3rem;font-weight:bolder">作品集 </router-link>
-            <br>
-            <router-link to="/example3" style="color:white;font-size: 0.2rem"> Profolio </router-link>
-          </div>
-          
-          <div class="flapCircle containerblock " id="flp03">
-            <br>
-            <router-link to="/example4" style="color:white;font-size: 0.3rem;font-weight:bolder">文字創作 </router-link>
-            <br>
-            <router-link to="/example4" style="color:white;font-size: 0.2rem"> Literature </router-link>
+          <div
+            class="flapCircle containerblock"
+            id="flp01"
+            @click="handleEnter('2')"
+          >
+            <br />
+            <router-link
+              to="/example2"
+              style="color: white; font-size: 0.3rem; font-weight: bolder"
+              >關於我
+            </router-link>
+            <br />
+            <router-link to="/example2" style="color: white; font-size: 0.2rem">
+              About me</router-link
+            >
           </div>
 
-          <div class="flapCircle containerblock " id="flp04">
-            <br>
-            <router-link to="/example5" style="color:white;font-size: 0.3rem;font-weight:bolder">參與計畫 </router-link>
-            <br>
-            <router-link to="/example5" style="color:white;font-size: 0.2rem"> Projets </router-link>
+          <div
+            class="flapCircle containerblock"
+            id="flp02"
+            @click="handleEnter('3')"
+          >
+            <br />
+            <router-link
+              to="/example3"
+              style="color: white; font-size: 0.3rem; font-weight: bolder"
+              >作品集
+            </router-link>
+            <br />
+            <router-link to="/example3" style="color: white; font-size: 0.2rem">
+              Profolio
+            </router-link>
           </div>
-          
-          <div class="flapCirclecon containerblock "></div>
+
+          <div
+            class="flapCircle containerblock"
+            id="flp03"
+            @click="handleEnter('4')"
+          >
+            <br />
+            <router-link
+              to="/example4"
+              style="color: white; font-size: 0.3rem; font-weight: bolder"
+              >文字創作
+            </router-link>
+            <br />
+            <router-link to="/example4" style="color: white; font-size: 0.2rem">
+              Literature
+            </router-link>
+          </div>
+
+          <div
+            class="flapCircle containerblock"
+            id="flp04"
+            @click="handleEnter('5')"
+          >
+            <br />
+            <router-link
+              to="/example5"
+              style="color: white; font-size: 0.3rem; font-weight: bolder"
+              >參與計畫
+            </router-link>
+            <br />
+            <router-link to="/example5" style="color: white; font-size: 0.2rem">
+              Projets
+            </router-link>
+          </div>
+
+          <div class="flapCirclecon containerblock"></div>
           <el-col :span="6" class="containerblock flap bg401"></el-col>
           <el-col :span="6" class="containerblock flap bg402"></el-col>
           <el-col :span="6" class="containerblock flap bg403"></el-col>
@@ -88,24 +134,48 @@
       </el-main>
 
       <el-footer class="containerblock">
-        <el-row class="containerblock footerow" >
+        <el-row class="containerblock footerow">
           <el-col :span="8">
-            <a target="_blank" href="https://www.instagram.com/pillowlowchen/?hl=en" 
-              style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/pillowlowchen/?hl=en"
+              style="
+                color: white;
+                font-size: 0.1rem;
+                margin-top: 0.1rem;
+                position: absolute;
+              "
+            >
               <span>Instagram</span>
             </a>
           </el-col>
 
           <el-col :span="8">
-            <a target="_blank" href="https://github.com/pillowlow"
-              style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute">
+            <a
+              target="_blank"
+              href="https://github.com/pillowlow"
+              style="
+                color: white;
+                font-size: 0.1rem;
+                margin-top: 0.1rem;
+                position: absolute;
+              "
+            >
               <span>Github</span>
             </a>
           </el-col>
 
           <el-col :span="8">
-            <a target="_blank" href="mailto:tmps9930613@gmail.com" 
-              style="color:white;font-size: 0.1rem;margin-top: 0.1rem;position: absolute">
+            <a
+              target="_blank"
+              href="mailto:tmps9930613@gmail.com"
+              style="
+                color: white;
+                font-size: 0.1rem;
+                margin-top: 0.1rem;
+                position: absolute;
+              "
+            >
               Email
             </a>
           </el-col>
@@ -116,56 +186,52 @@
 </template>
 
 <script>
-import P5 from 'p5';
+import P5 from "p5";
 var html = document.documentElement;
 
 export default {
-
-
-
-
   data() {
-    screenWidth: document.body.clientWidth
-    function fontS(){
+    screenWidth: document.body.clientWidth;
+    function fontS() {
       var hW = html.offsetWidth;
       var hS = hW / 1000;
       html.style.fontSize = hS + "px";
     }
     return {
       p5Canvas: null,
-    }
+    };
   },
-  
+  methods: {
+    handleEnter(id) {
+      this.$router.push("example" + id);
+    },
+  },
+
   watch: {
-    screenWidth (val) {
+    screenWidth(val) {
       if (!this.timer) {
-        this.screenWidth = val
-        this.timer = true
-        let that = this
+        this.screenWidth = val;
+        this.timer = true;
+        let that = this;
         setTimeout(function () {
           // that.screenWidth = that.$store.state.canvasWidth
-          console.log(that.screenWidth)
-          that.init()
-          that.timer = false
-        }, 400)
-
-
+          console.log(that.screenWidth);
+          that.init();
+          that.timer = false;
+        }, 400);
       }
       fontS();
-    }
-
-
+    },
   },
   created() {
-    const that = this
+    const that = this;
     window.onresize = () => {
       return (() => {
-        window.screenWidth = document.body.clientWidth
-        that.screenWidth = window.screenWidth
-      })()
+        window.screenWidth = document.body.clientWidth;
+        that.screenWidth = window.screenWidth;
+      })();
     };
     const sketch = p5 => {
-
       // start of p5
 
       let zoff = 0;
@@ -173,10 +239,9 @@ export default {
       let ct =0,ct2 = 0;
       let r2 =0;
 
-
-
       p5.setup = () => {
-        p5.createCanvas(p5.windowWidth, 0.7*p5.windowHeight);
+        let cnv = p5.createCanvas(p5.windowWidth, 0.7*p5.windowHeight);
+        cnv.parent('#p5Canvas');
         p5.background(0,0,0,1);
         //let r = floor(random(10000));
         //let r = 6273;//floor(random(10000));
@@ -220,38 +285,30 @@ export default {
           p5.vertex(x, y);
         }
         p5.endShape(p5.CLOSE);
-
-
-
         zoff += 0.01;
-
         //p5.print(p5.windowWidth,p5.windowHeight,xp,yp,speed,derec);
         //save(frameCount + ".png");
-
       };
-
       //end of p5
     }
-
-    this.p5Canvas = new P5(sketch, 'p5Canvas');
+    //this.p5Canvas = new P5(sketch, 'p5Canvas');
+    
     console.log(this.p5Canvas);
   },
-  unmounted () {
-    console.log(this.p5Canvas)
+  unmounted() {
+    console.log(this.p5Canvas);
     this.p5Canvas = null;
-    console.log(this.p5Canvas)
+    console.log(this.p5Canvas);
   },
-
-
-}
+};
 </script>
 
 
 <style>
-.el-main{
+.el-main {
   padding: 1px;
 }
-.el-header{
+.el-header {
   padding: 1px;
   margin-top: 5vh;
 }
@@ -261,25 +318,30 @@ export default {
 .el-col {
   padding: 0;
 }*/
-.el-footer{
+.el-row {
+  margin-bottom: 0;
+}
+.el-col {
+  margin-bottom: 0;
+}
+.el-footer {
   padding: 1px;
   height: 2rem;
-  
 }
-.bg401{
-  background-image: url('../assets/4bg-01.svg');
+.bg401 {
+  background-image: url("../assets/4bg-01.svg");
   background-repeat: no-repeat;
 }
-.bg402{
-  background-image: url('../assets/4bg-02.svg');
+.bg402 {
+  background-image: url("../assets/4bg-02.svg");
   background-repeat: no-repeat;
 }
-.bg403{
-  background-image: url('../assets/4bg-03.svg');
+.bg403 {
+  background-image: url("../assets/4bg-03.svg");
   background-repeat: no-repeat;
 }
-.bg404{
-  background-image: url('../assets/4bg-04.svg');
+.bg404 {
+  background-image: url("../assets/4bg-04.svg");
   background-repeat: no-repeat;
 }
 #p5Canvas {
@@ -287,7 +349,7 @@ export default {
   left: 0;
   top: 0;
 }
-#webtitle{
+#webtitle {
   position: relative;
   width: 40vw;
   height: 30vh;
@@ -296,7 +358,7 @@ export default {
   line-height: 1vh;
   letter-spacing: 0.5vw;
 }
-#logo{
+#logo {
   background-image: url("../assets/logo.svg");
   opacity: 0.8;
   mix-blend-mode: lighten;
@@ -307,102 +369,97 @@ export default {
   border-color: white;
   border-style: solid;
   border-width: 1px;
-  left:20vw;
-  margin-top:15vh;
-
+  left: 20vw;
+  margin-top: 15vh;
 }
-#logo:hover{
-  transform: scale(1.02,1.02);
+#logo:hover {
+  transform: scale(1.02, 1.02);
   animation: logo 1s linear infinite;
 }
 @keyframes logo {
-  0%{
-    transform: rotate3d(0,1,0,0deg);
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
   }
-  25%{
-    transform: rotate3d(0,1,0,180deg);
+  25% {
+    transform: rotate3d(0, 1, 0, 180deg);
   }
-  50%{
-    transform: rotate3d(0,1,0,360deg);
+  50% {
+    transform: rotate3d(0, 1, 0, 360deg);
   }
-  75%{
-    transform: rotate3d(0,1,0,-180deg);
+  75% {
+    transform: rotate3d(0, 1, 0, -180deg);
   }
-  100%{
-    transform: rotate3d(0,1,0,0deg);
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
   }
 }
-#wordblock1{
+#wordblock1 {
   position: absolute;
   margin-left: 5vw;
   font-weight: bold;
   line-height: 3vh;
   color: white;
-  border-color: rgba(255,255,255,0.4);
+  border-color: rgba(255, 255, 255, 0.4);
   border-width: 1px;
   border-style: solid;
   align-content: center;
-  background-color: rgba(0,0,0,0.7);
-  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
   width: 40vw;
-  background-image:
-      linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
-      linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 0),
-      linear-gradient(rgba(255,255,255,0.4) 1px, transparent 0),
-      linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 0);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 0),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 0),
+    linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 0),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 0);
   background-size: 1.5vw 1.5vw, 1.5vw 1.5vw, 7.5vw 7.5vw, 7.5vw 7.5vw;
-
 }
-#wordblock1:hover{
+#wordblock1:hover {
   animation: grid 2s ease-in-out 1;
-  transform: scale(1.02,1.02);
-  background-image:
-      linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
-      linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 0),
-      linear-gradient(rgba(255,255,255,0.4) 1px, transparent 0),
-      linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 0);
+  transform: scale(1.02, 1.02);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 0),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 0),
+    linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 0),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 0);
   background-size: 2vw 2vw, 2vw 2vw, 10vw 10vw, 10vw 10vw;
 }
 @keyframes grid {
-  from{
-    background-image:
-        linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
-        linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 0),
-        linear-gradient(rgba(255,255,255,0.4) 1px, transparent 0),
-        linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 0);
+  from {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.2) 1px,
+        transparent 0
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 0),
+      linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 0),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 0);
     background-size: 1.5vw 1.5vw, 1.5vw 1.5vw, 7.5vw 7.5vw, 7.5vw 7.5vw;
   }
-  to{
-    background-image:
-        linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
-        linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 0),
-        linear-gradient(rgba(255,255,255,0.4) 1px, transparent 0),
-        linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 0);
+  to {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.2) 1px,
+        transparent 0
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 0),
+      linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 0),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 0);
     background-size: 2vw 2vw, 2vw 2vw, 10vw 10vw, 10vw 10vw;
   }
 }
-.containerblock{
-  background-color: rgba(0,0,0,0);
+.containerblock {
+  background-color: rgba(0, 0, 0, 0);
   border-width: 1px;
   border-color: white;
   border-style: solid;
   overflow: hidden;
 }
-.headercol{
-  height: 69vh;
-}
-ul1{
+ul1 {
   font-size: 0.15rem;
 }
 .marqee {
-
   height: 5vh;
   margin: 0 auto;
   line-height: 5vh;
   overflow: hidden;
   position: relative;
-  background: rgba(0,0,0,0.3);
-
+  background: rgba(0, 0, 0, 0.3);
 }
 .marqee > ul1 {
   padding-left: 0;
@@ -428,86 +485,85 @@ ul1{
     transform: translateX(-100%);
   }
 }
-#wordblock02{
+#wordblock02 {
   height: 25vw;
 }
-.flap{
+.flap {
   z-index: 2;
   opacity: 0.4;
 }
-.flap:hover{
+.flap:hover {
   z-index: 3;
 
   animation: logo 1s linear 1;
-
-
 }
-.flapCircle{
+.flapCircle {
   z-index: 6;
   position: absolute;
-  margin-top: 2.5vw ;
+  margin-top: 2.5vw;
   width: 1.7rem;
   height: 1.7rem;
   border-radius: 1.7rem;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   line-height: 0.4rem;
+  cursor: pointer;
 }
-#flp01{
+#flp01 {
   margin-left: 0.4rem;
 }
-#flp02{
+#flp02 {
   margin-left: 2.8rem;
 }
-#flp03{
+#flp03 {
   margin-left: 5.2rem;
 }
-#flp04{
+#flp04 {
   margin-left: 7.6rem;
 }
-.flapCircle:hover{
-  transform: scale(1.02,1.02);
-
+.flapCircle:hover {
+  transform: scale(1.02, 1.02);
 }
-.flapCirclecon{
-  width:100vw;
+.flapCirclecon {
+  width: 100vw;
   height: 25vw;
   margin-left: 0;
   position: absolute;
-  background-image:
-      linear-gradient(rgba(255,255,255,.2) 1px, transparent 0),
-      linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 0),
-      linear-gradient(rgba(255,255,255,0.4) 1px, transparent 0),
-      linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 0);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 0),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 0),
+    linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 0),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 0);
   background-size: 1.5vw 1.5vw, 1.5vw 1.5vw, 7.5vw 7.5vw, 7.5vw 7.5vw;
   z-index: 1;
 }
-.footerow{
+.footerow {
   height: 2rem;
 }
-body{
+body {
   background-color: black;
 }
-p{ font-size: 0.4rem; }
-h1{
+p {
+  font-size: 0.4rem;
+}
+h1 {
   font-size: 0.4rem;
   line-height: 0.2rem;
 }
-h2{
+h2 {
   font-size: 0.35rem;
   line-height: 0.2rem;
 }
-h3{
+h3 {
   font-size: 0.3rem;
 }
-h4{
+h4 {
   font-size: 0.25rem;
 }
-h5{
+h5 {
   font-size: 0.15rem;
   line-height: 1vh;
 }
-h6{
+h6 {
   font-size: 0.1rem;
 }
 </style>
